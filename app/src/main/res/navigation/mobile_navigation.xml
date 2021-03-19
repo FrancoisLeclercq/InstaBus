@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.franscar.instabus.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_bus_station"
+            app:destination="@id/busStationFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.franscar.instabus.ui.map.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_map_to_bus_station"
+            android:label="@string/title_map"
+            app:destination="@id/busStationFragment"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_bottom"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_top"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.franscar.instabus.ui.settings.SettingsFragment"
+        android:label="@string/title_settings" />
+
+    <fragment
+        android:id="@+id/busStationFragment"
+        android:name="com.franscar.instabus.ui.bus_station.BusStationFragment"
+        tools:layout="@layout/fragment_bus_station" >
+        <action
+            android:id="@+id/action_bus_station_to_camera"
+            app:destination="@id/cameraFragment"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_bottom"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_top"/>
+        <action
+            android:id="@+id/action_bus_station_to_image"
+            app:destination="@id/imageFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.franscar.instabus.ui.camera.CameraFragment"
+        android:label="@string/title_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_camera_to_picture"
+            app:destination="@id/pictureFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.franscar.instabus.ui.picture.PictureFragment"
+        android:label="Picture"
+        tools:layout="@layout/fragment_picture">
+        <action
+            android:id="@+id/action_picture_to_bus_station"
+            app:destination="@id/busStationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.franscar.instabus.ui.image.ImageFragment"
+        android:label="Image"
+        tools:layout="@layout/fragment_picture">
+        <action
+            android:id="@+id/action_image_to_bus_station"
+            app:destination="@id/busStationFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+</navigation>

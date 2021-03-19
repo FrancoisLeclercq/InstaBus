@@ -1,4 +1,5 @@
 # InstaBus
+<img src="https://i.imgur.com/garhKcX.png" alt="Logo" width="200px">
 Take pictures from your favorite bus stations in Barcelona!
 
 ### Lots to love:
@@ -7,10 +8,6 @@ Take pictures from your favorite bus stations in Barcelona!
 - Customization options
 - Simple light & dark mode
 - Intuitive camera experience
-
-
-<img src="https://i.imgur.com/garhKcX.png" alt="Logo" width="200px">
-
 
 ![Home page](https://i.imgur.com/1OCjU0p.png)
 ![Gallery](https://i.imgur.com/bmlPWj2.png)
